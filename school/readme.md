@@ -1,8 +1,9 @@
 
-Lab 1: Prepared Statements
-Objective
+# Lab 1: Prepared Statements
+## Objective
 In this lab we will learn what are prepare statements and how to use them.
-Material
+## Material
+
 1. Starter file: School.zip
 2. Solution file: Lab01-1_PreparedStatements.zip
 Overview
@@ -13,14 +14,17 @@ Overview
 5. Create and use a prepared statement to display admission table data
 6. Create and use a prepared statement to update admission table data
 7. Create and use a prepared statement to delete admission table data
-Inspect AdmissionData.txt
+
+# Inspect AdmissionData.txt
+
 The admissionData.txt represents data for newly admitted students, the data contain the following
 student information
-• First name
-• Last name
-• Date of birth
-• Gender
-• Grade
+    
+    - First name
+    - Last name
+    - Date of birth
+    - Gender
+    - Grade
 Determine the appropriate field name, type and size.
 FIRST_NAME LAST_NAME DOB GENDER GRADE
 CHAR (25) NOT NULL CHAR (25) NOT NULL DATE CHAR (1) INT
@@ -28,6 +32,8 @@ Create connection to database
 Create a class called SchoolDatabase.java. In it, create a method to connect to the database.
 Creating Admissions table
 Write and execute a statement to create table a called ADMISSIONS.
+
+```
 private void databaseConnection() {
 String driverClass = "org.apache.derby.jdbc.EmbeddedDriver";
 String url = "jdbc:derby:memory:school;create=true";
@@ -57,14 +63,19 @@ System.out.println("SQL Exception in SchoolDAO() createAdmissionsTable() "
 + e.getMessage());
 }
 }
-Add data to ADMISSIONS table
-Write a method that executes following statement to insert data into the admissions table.
-Create constructor to create and populate the database
-Write the constructor to call the previously defined methods to create and populate the database.
-Create a method to get the connection
-Define a new class
-Define a new class called SchoolDAO.java. Create a constructor that takes an instance of the
-SchoolDatabase and gets the connection from it.
+```
+
+### Add data to ADMISSIONS table
+
+- Write a method that executes following statement to insert data into the admissions table.
+- Create constructor to create and populate the database
+- Write the constructor to call the previously defined methods to create and populate the database.
+- Create a method to get the connection
+- Define a new class
+- Define a new class called SchoolDAO.java. Create a constructor that takes an instance of the
+- SchoolDatabase and gets the connection from it.
+
+```
 String rows = "INSERT INTO ADMISSIONS (LAST_NAME, FIRST_NAME, DOB, GENDER, GRADE) VALUES "+
 " ( 'Able', 'Adam', '2012-06-1-12.00.00.000000', 'M',1),"+
 "( 'Baker', 'Betty', '2012-06-1-12.00.00.000000', 'F',2),"+
@@ -81,10 +92,14 @@ databaseConnection();
 createAdmissionsTable();
 loadAdmissionsTable();
 }
+```
+
 Display ADMISSION table data
 Write a method that executes a prepared statement find and print all records to the console.
 Update a record by ID
 Write and execute a prepared statement and update FIRST_NAME to ‘ALEX’ where ID = 3
+
+```
 ResultSet rs = st.executeQuery("SELECT * FROM ADMISSIONS");
 while (rs.next()) {
 int id = rs.getInt("ID");
@@ -110,15 +125,21 @@ System.out.println("SQL Exception in SchoolDAO() updateAdmissionFirstNameById()
 }
 System.out.println("Table ADMISSIONS record updated.");
 }
-Delete a record by ID
-Write and execute a prepared statement to delete record from AMISSIONS where ID = 3
-Final result:
-Create a class called School.java with main method and execute the code in following sequence using a
+
+```
+
+### Delete a record by ID
+
+- Write and execute a prepared statement to delete record from AMISSIONS where ID = 3
+- Final result:
+    - Create a class called School.java with main method and execute the code in following sequence using a
 SchoolDatabase and a SchoolDAO instance
-If everything is in place the outcome in console should be like this
-Table ADMISSIONS drop dropped.
-Table ADMISSIONS created.
-Table ADMISSIONS loaded.
+    - If everything is in place the outcome in console should be like this
+    - Table ADMISSIONS drop dropped.
+    - Table ADMISSIONS created.
+    - Table ADMISSIONS loaded.
+
+```
 ID FIRST_NAME LAST_NAME DOB GENDER GRADE
 =================================================================================
 1 Able Adam 2012-06-01 M 1
@@ -128,6 +149,8 @@ ID FIRST_NAME LAST_NAME DOB GENDER GRADE
 5 Elle Edward 2012-06-01 M 5
 6 Fry Frances 2012-06-01 F 4
 7 GATES GIL 2012-06-01 M 6
+```
+```
 public static void main(String args[]) {
 SchoolDatabase db = new SchoolDatabase();
 SchoolDAO dao = new SchoolDAO(db);
@@ -151,10 +174,15 @@ e.getMessage());
 }
 System.out.println("Table ADMISSIONS record deleted.");
 }
+```
+
+```
 8 Hess Hank 2012-06-01 F 1
 9 Idman Ida 2012-06-01 M 3
 10 JACOBS JAMES 2012-06-01 M 2
 Total Item Count: 10
+```
+```
 Table ADMISSIONS record updated.
 ID FIRST_NAME LAST_NAME DOB GENDER GRADE
 =================================================================================
@@ -169,6 +197,8 @@ ID FIRST_NAME LAST_NAME DOB GENDER GRADE
 9 Idman Ida 2012-06-01 M 3
 10 JACOBS JAMES 2012-06-01 M 2
 Total Item Count: 10
+```
+```
 Table ADMISSIONS record deleted.
 ID FIRST_NAME LAST_NAME DOB GENDER GRADE
 =================================================================================
@@ -182,3 +212,4 @@ ID FIRST_NAME LAST_NAME DOB GENDER GRADE
 9 Idman Ida 2012-06-01 M 3
 10 JACOBS JAMES 2012-06-01 M 2
 Total Item Count: 9
+```
