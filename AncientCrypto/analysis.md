@@ -45,3 +45,6 @@ String alphabet= 'ABCDEFGHIJKLMNOPQRSTVWXYZ';
 String shiftedAlphabet =  alphabet.subString(0,key) + substring(0,key);
 
 ```
+### 3. Remeber to use StringBuilder in java
+![imagen](https://user-images.githubusercontent.com/63612112/199546472-8d62fbec-2e60-4f80-a206-ae74026c2979.png)
+
