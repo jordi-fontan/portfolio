@@ -1,5 +1,6 @@
+## 1. Caesar Cipher
 
-### 1. Caesar's Cipher Strategies
+### 1.1 Caesar's Cipher Strategies
 
 ![imagen](https://user-images.githubusercontent.com/63612112/199528708-a6595e60-7ed7-48b8-9fde-1ff5d0aaa981.png)
 
@@ -30,12 +31,21 @@ int index = alphabet.indexOf('F');
 char codedF= shiftedAlphabet.charAt(index);
 
 ```
-### 2. Shifted Alphabet Build
+### 1.2. Shifted Alphabet Build
 
 
 ![imagen](https://user-images.githubusercontent.com/63612112/199542616-e57e9b58-41f3-4f0d-9520-37adafe0b2e7.png)
 
-#### 2.1 Pseudocode
+
+
+
+
+Vigenere Cipher
+
+![imagen](https://user-images.githubusercontent.com/63612112/199555487-a1b6c83a-308b-49fd-aa0a-fb31ad27e225.png)
+
+
+#### 1.2.1 Pseudocode
 
 ```
 String alphabet= 'ABCDEFGHIJKLMNOPQRSTVWXYZ';
@@ -45,6 +55,36 @@ String alphabet= 'ABCDEFGHIJKLMNOPQRSTVWXYZ';
 String shiftedAlphabet =  alphabet.subString(0,key) + substring(0,key);
 
 ```
-### 3. Remeber to use StringBuilder in java
+### 1.3. Remeber to use StringBuilder in java
 ![imagen](https://user-images.githubusercontent.com/63612112/199546472-8d62fbec-2e60-4f80-a206-ae74026c2979.png)
+
+
+
+## 2. Vigenere Code
+
+`key= DICE`
+
+![imagen](https://user-images.githubusercontent.com/63612112/199555682-51924a7a-df2f-4161-bdb6-b950b0b40976.png)
+
+
+### 2.1 Known Language and Key Length
+
+![imagen](https://user-images.githubusercontent.com/63612112/199556551-d98d121d-d962-43a4-bccd-0c8d2572db90.png)
+
+#### Slicing
+
+1. blue (0)
+
+![imagen](https://user-images.githubusercontent.com/63612112/199556848-3ecd4f26-e55d-4ebb-b08f-07703a362681.png)
+
+2. red (1)
+
+![imagen](https://user-images.githubusercontent.com/63612112/199557135-9c1e229c-b157-4a9f-93b1-1a977b508603.png)
+
+3. Advice
+
+![imagen](https://user-images.githubusercontent.com/63612112/199557400-b498b062-6a76-42c0-bafd-dc3748e32369.png)
+
+4. Try Key Length
+
 
