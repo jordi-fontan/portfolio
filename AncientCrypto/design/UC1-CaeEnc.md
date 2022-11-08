@@ -1,16 +1,16 @@
-# Ask for key
+1. Ask for key
  
-# Ask for input method
+ 1.1 Ask for input method
 
-# Ask for input
+2.1 Ask for input
 
-  # Open file
+  2.1.1 Open file
   
-  # Read ipnut
+  2.1.2 Read input
 
-# Build shifted alphabet
+3 Build shifted alphabet
 
-# Encript
+4 Encript
 
 
-# Show output
+5 Show output
