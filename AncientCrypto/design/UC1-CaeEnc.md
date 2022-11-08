@@ -9,8 +9,11 @@
   2.1.2 Read input
 
 3 Build shifted alphabet
+  3.1 ShiftedAlphabet = alphabet.substring(key) + alphabet.substring(0,key)
 
 4 Encript
-
-
+    
+    for  chars in message
+      encChar= shiftedAlphabet.getChar(char) # look the char at same pos 
+      output=output + encChar
 5 Show output
