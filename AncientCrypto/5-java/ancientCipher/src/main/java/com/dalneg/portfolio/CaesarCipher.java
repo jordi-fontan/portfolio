@@ -1,4 +1,4 @@
-package dukejavac3w1.caesar;
+package com.dalneg.portfolio;
 /*
  * Assignment 2: Caesar Cipher
  * You will start with the Caesar Cipher algorithm you learned about in the videos,

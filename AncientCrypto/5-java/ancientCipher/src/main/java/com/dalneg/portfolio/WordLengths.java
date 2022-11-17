@@ -1,4 +1,4 @@
-package dukejavac3w1.caesar;
+package com.dalneg.portfolio;
 
 import java.io.*;
 import java.util.StringTokenizer;
