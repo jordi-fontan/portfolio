@@ -11,4 +11,8 @@ import java.lang.annotation.Target;
 @Target({ TYPE, METHOD })
 public @interface Idea {
 
+	String value();
+
+	
+
 }

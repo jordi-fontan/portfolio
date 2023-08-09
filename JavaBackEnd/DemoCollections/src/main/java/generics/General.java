@@ -3,7 +3,7 @@ package generics;
 public class General {
 
 	class RaceCar{
-		private static final String Logs = "Logs";
+	//	private static final String Logs = "Logs";
 		private String name;
 		private float speed;
 		
@@ -23,7 +23,7 @@ public class General {
 		public void setSpeed(float speed) {
 			this.speed = speed;
 		}
-		@Idea(Logs)
+	//	@Idea(value = "Logs")
 		public void race()
 		{
 			
